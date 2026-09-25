@@ -1,0 +1,1423 @@
+/*
+ * 数値はすべて完成見本（幅596px）上の座標を 1rem = 100px で換算した値。
+ * 例: 見本で 24px → 0.24rem
+ */
+
+.lp {
+  position: relative;
+  width: 100%;
+  max-width: 5.96rem;
+  margin: 0 auto;
+  overflow-x: clip;
+  background: var(--black);
+}
+
+/* ---------- 共通：アウトライン見出し ---------- */
+.secTitle {
+  text-align: center;
+}
+
+.secTitleEn {
+  font-family: var(--font-noto-latin), sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  color: transparent;
+  letter-spacing: -0.03em;
+  -webkit-text-stroke: 1px #7a7a7a;
+  white-space: nowrap;
+}
+
+.secTitleJa {
+  font-weight: 300;
+  font-size: 0.22rem;
+  line-height: 1;
+  color: #e6e6e6;
+}
+
+/* ---------- 共通：ボタン ---------- */
+.btnPair {
+  display: flex;
+  justify-content: space-between;
+  width: 4.95rem;
+  margin: 0 auto;
+}
+
+.btnSmall,
+.btnWide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  box-shadow: 0.05rem 0.05rem 0 #0b0b0b;
+  transition: filter 0.15s;
+}
+
+.btnSmall:hover,
+.btnWide:hover {
+  filter: brightness(1.08);
+}
+
+.btnSmall:focus-visible,
+.btnWide:focus-visible,
+.snsLine:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.btnSmall {
+  width: 2.3rem;
+  height: 0.6rem;
+  font-size: 0.22rem;
+  letter-spacing: 0.3em;
+  padding-left: 0.3em;
+  color: #111;
+}
+
+.btnWide {
+  width: 4.95rem;
+  height: 0.6rem;
+  font-size: 0.22rem;
+  letter-spacing: 0.34em;
+  padding-left: 0.34em;
+}
+
+.btnWide::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0.58rem;
+  height: 100%;
+  background: #000;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.btnOrange {
+  background: var(--orange);
+}
+
+.btnWide.btnOrange {
+  color: #fff;
+}
+
+.btnLime {
+  background: var(--lime);
+  color: #111;
+}
+
+/* ================= FV ================= */
+.fv {
+  position: relative;
+  height: 7.77rem;
+}
+
+.fvBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fvLogo {
+  position: absolute;
+  left: 1.36rem;
+  top: 0.9rem;
+  width: 3.12rem;
+}
+
+.fvTitle {
+  font-weight: inherit;
+}
+
+.fvTitleEn {
+  position: absolute;
+  left: -0.1rem;
+  right: 0;
+  top: 1.77rem;
+  letter-spacing: 0.005em;
+  font-family: var(--font-open), sans-serif;
+  font-weight: 700;
+  font-size: 0.588rem;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fvGoout {
+  position: absolute;
+  left: 1.02rem;
+  top: 2.52rem;
+  width: 3.96rem;
+}
+
+.fvTitleJa {
+  position: absolute;
+  left: 1.36rem;
+  top: 3.11rem;
+  letter-spacing: 0.03em;
+  font-weight: 900;
+  font-size: 0.68rem;
+  line-height: 1;
+  white-space: nowrap;
+  transform: skewX(-14deg);
+  transform-origin: left bottom;
+}
+
+.fvDate {
+  position: absolute;
+  left: 0.94rem;
+  top: 4.3rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.fvDateNum {
+  font-size: 0.228rem;
+}
+
+.fvDateDay {
+  margin: 0 0.02rem 0 0.05rem;
+  font-size: 0.14rem;
+}
+
+.fvPlace {
+  position: absolute;
+  left: 3.54rem;
+  top: 4.15rem;
+  font-weight: 700;
+  font-size: 0.17rem;
+  line-height: 0.235rem;
+  white-space: nowrap;
+}
+
+/* ================= 塗装体験告知 ================= */
+.intro {
+  position: relative;
+  height: 1.57rem;
+}
+
+.introText {
+  position: absolute;
+  left: 0.31rem;
+  top: 0.11rem;
+  width: 1.41rem;
+  height: 1.37rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0.06rem;
+  border-top: 1px solid rgba(154, 204, 0, 0.45);
+  border-bottom: 1px solid rgba(154, 204, 0, 0.45);
+  white-space: nowrap;
+}
+
+.introSmall {
+  font-weight: 300;
+  font-size: 0.184rem;
+  line-height: 1;
+  color: #e3e3e3;
+}
+
+.introBig {
+  margin: 0.09rem 0 0.1rem;
+  font-weight: 700;
+  font-size: 0.33rem;
+  line-height: 1;
+  color: var(--lime);
+}
+
+.introPhoto {
+  position: absolute;
+  left: 1.76rem;
+  top: 0;
+  width: 4.2rem;
+}
+
+/* ================= 相談OK / 下取りOK ================= */
+.points {
+  position: relative;
+  display: flex;
+  width: 5.27rem;
+  height: 1.66rem;
+  margin-left: 0.31rem;
+  padding-top: 0.48rem;
+}
+
+.points::before,
+.points::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.09rem;
+  background: var(--lime);
+}
+
+.points::before {
+  top: 0.26rem;
+}
+
+.points::after {
+  top: 1.48rem;
+  height: 0.08rem;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  width: 2.61rem;
+  height: 0.86rem;
+  padding-left: 0.12rem;
+}
+
+.point + .point {
+  width: 2.66rem;
+  padding-left: 0.27rem;
+  border-left: 1px solid rgba(154, 204, 0, 0.55);
+}
+
+.pointIcon {
+  flex: none;
+  width: 0.9rem;
+  height: 0.9rem;
+  margin: 0 -0.02rem;
+}
+
+
+.pointText {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.16rem;
+  white-space: nowrap;
+}
+
+.point + .point .pointText {
+  margin-left: 0.16rem;
+}
+
+.pointSmall {
+  font-weight: 300;
+  font-size: 0.172rem;
+  line-height: 1;
+  color: #e3e3e3;
+}
+
+.pointBig {
+  margin-top: 0.12rem;
+  font-weight: 700;
+  font-size: 0.32rem;
+  line-height: 1;
+  color: var(--lime);
+}
+
+/* ================= 入場チケット ================= */
+.ticket {
+  height: 1.9rem;
+  padding-top: 0.13rem;
+}
+
+.ticketBox {
+  position: relative;
+  width: 5.27rem;
+  height: 1.37rem;
+  margin-left: 0.31rem;
+  border: 1.5px solid #e6e6e6;
+  border-radius: 0.08rem;
+}
+
+.ticketCircle {
+  position: absolute;
+  left: 0.14rem;
+  top: 0.24rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.86rem;
+  height: 0.86rem;
+  border-radius: 50%;
+  background: var(--orange);
+  font-weight: 700;
+  font-size: 0.17rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.ticketText {
+  position: absolute;
+  left: 1.1rem;
+  top: 0.32rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.ticketSmall {
+  font-size: 0.235rem;
+}
+
+.ticketBig {
+  margin-top: 0.09rem;
+  font-size: 0.334rem;
+}
+
+.ticketImg {
+  position: absolute;
+  left: 3.8rem;
+  top: 0.085rem;
+  width: 1.48rem;
+}
+
+/* ================= WHAT WE CAN ================= */
+.what {
+  background: var(--gray-1);
+  padding: 1.15rem 0 1.02rem;
+}
+
+.whatTitle {
+  margin-top: 1.14rem;
+}
+
+.whatTitle .secTitleEn {
+  font-size: 0.71rem;
+  letter-spacing: -0.015em;
+  -webkit-text-stroke: 1px #8a8a8a;
+}
+
+.whatTitle .secTitleJa {
+  margin-top: 0.21rem;
+  margin-bottom: -0.06rem;
+}
+
+.whatList {
+  display: grid;
+  grid-template-columns: 2.3rem 2.3rem;
+  column-gap: 0.35rem;
+  row-gap: 0.36rem;
+  width: 4.95rem;
+  margin: 0.73rem auto 0;
+}
+
+.whatItem {
+  position: relative;
+  width: 2.3rem;
+  height: 2.88rem;
+}
+
+.whatImg {
+  width: 100%;
+  height: 100%;
+}
+
+.whatNo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0.585rem;
+  font-family: var(--font-open), sans-serif;
+  font-weight: 400;
+  font-size: 1.45rem;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  padding-left: 0.04em;
+  text-align: center;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+
+.whatLabel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2.08rem;
+  font-weight: 700;
+  font-size: 0.22rem;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  padding-left: 0.15em;
+  text-align: center;
+}
+
+.btnStack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.36rem;
+  width: 4.95rem;
+  margin: 0.75rem auto 0;
+}
+
+.cars {
+  width: 100%;
+}
+
+/* ================= MERIT ================= */
+.merit {
+  padding: 1.05rem 0 2.18rem;
+}
+
+.meritTitle .secTitleEn {
+  font-size: 1.44rem;
+  -webkit-text-stroke: 1px #6c6c6c;
+}
+
+.meritTitle .secTitleEn {
+  transform: translateX(-0.1rem);
+}
+
+.meritTitle .secTitleJa {
+  margin-top: 0.15rem;
+  font-size: 0.227rem;
+  transform: translateX(-0.04rem);
+}
+
+.meritList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0.76rem 0 0 0.73rem;
+  width: 5.21rem;
+}
+
+.meritItem {
+  height: 2.02rem;
+  background: var(--card);
+  padding: 0.24rem 0 0 0.34rem;
+}
+
+.meritItem[data-no="01"] {
+  height: 2.01rem;
+  margin-bottom: 0.02rem;
+}
+
+.meritItem[data-no="02"] {
+  height: 1.76rem;
+}
+
+.meritItem[data-no="05"] {
+  height: 1.54rem;
+}
+
+.meritItem[data-no="03"] {
+  padding-left: 0.28rem;
+}
+
+.meritHead {
+  display: flex;
+  align-items: center;
+  gap: 0.18rem;
+  height: 0.6rem;
+  padding-bottom: 0.1rem;
+  border-bottom: 0.018rem solid #f0f0f0;
+  width: 4.44rem;
+}
+
+.meritNo {
+  font-family: var(--font-open), sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 0.56rem;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: transparent;
+  -webkit-text-stroke: 1px #cfcfcf;
+}
+
+.meritName {
+  font-weight: 700;
+  font-size: 0.226rem;
+  line-height: 1;
+}
+
+.meritText {
+  margin-top: 0.13rem;
+  font-weight: 700;
+  font-size: 0.195rem;
+  line-height: 0.275rem;
+  color: var(--lime);
+  white-space: nowrap;
+}
+
+/* ================= BOOTH ================= */
+.booth {
+  padding-bottom: 1.32rem;
+}
+
+.boothTitle .secTitleEn {
+  font-size: 1.43rem;
+  letter-spacing: -0.04em;
+  transform: translateX(-0.05rem);
+  -webkit-text-stroke: 1px #6c6c6c;
+}
+
+.boothTitle .secTitleJa {
+  margin-top: 0.14rem;
+  font-size: 0.228rem;
+}
+
+.boothImg {
+  width: 5.9rem;
+  margin-top: 0.6rem;
+}
+
+/* ================= 塗装体験 ================= */
+.paint {
+  position: relative;
+  height: 23.38rem;
+}
+
+.paintBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.paintHead {
+  position: absolute;
+  left: 0.56rem;
+  top: 0.77rem;
+  width: 4.78rem;
+  height: 0.56rem;
+  font-weight: 900;
+  font-size: 0.49rem;
+  line-height: 1;
+  letter-spacing: 0.175em;
+  padding-left: 0.13rem;
+  color: #111;
+  white-space: nowrap;
+  background: linear-gradient(to bottom, transparent 0.42rem, #fedd4c 0.42rem, #fedd4c 0.56rem);
+}
+
+.paintLabel {
+  position: absolute;
+  left: 1.37rem;
+  top: 1.55rem;
+  width: 3.17rem;
+  height: 0.48rem;
+  background: #6b8e2b;
+  font-weight: 700;
+  font-size: 0.36rem;
+  line-height: 0.48rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.paintCatch {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 5.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 900;
+  font-size: 0.33rem;
+  line-height: 0.44rem;
+  letter-spacing: 0.2em;
+  color: var(--orange);
+  white-space: nowrap;
+  transform: rotate(-10deg);
+}
+
+.paintOverview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 9.3rem;
+  font-weight: 900;
+  font-size: 0.48rem;
+  line-height: 1;
+  letter-spacing: 0.17em;
+  margin-left: -0.08rem;
+  text-align: center;
+  color: #111;
+  text-shadow: 0.02rem 0.02rem 0 #fff;
+}
+
+.paintBox {
+  position: absolute;
+  left: 0.83rem;
+  top: 10.8rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.paintBox dt {
+  font-size: 0.3rem;
+  letter-spacing: 0.16em;
+  color: var(--lime);
+}
+
+.paintBox dd {
+  display: flex;
+  flex-direction: column;
+}
+
+.paintYear {
+  margin-top: 0.19rem;
+  font-size: 0.2rem;
+  letter-spacing: 0.28em;
+}
+
+.paintDate {
+  margin: 0.22rem 0 0.2rem;
+  font-size: 0.29rem;
+  letter-spacing: 0.224em;
+}
+
+.paintTimes {
+  gap: 0.1rem;
+  margin: 0.22rem 0 0.22rem;
+  font-size: 0.27rem;
+  letter-spacing: 0.18em;
+}
+
+.paintNote {
+  margin-top: 0.17rem;
+  font-size: 0.225rem;
+  line-height: 0.33rem;
+  letter-spacing: 0.06em;
+}
+
+.paintBtn {
+  position: absolute;
+  left: 0.48rem;
+  top: 16.24rem;
+  width: 4.95rem;
+  color: #111 !important;
+  font-size: 0.22rem;
+}
+
+.safety {
+  position: absolute;
+  left: 0.5rem;
+  top: 17.73rem;
+  width: 4.97rem;
+  text-align: center;
+}
+
+.safetyHead {
+  margin-top: 0.47rem;
+  font-weight: 900;
+  font-size: 0.52rem;
+  line-height: 0.67rem;
+  text-shadow: 0.03rem 0.03rem 0 #000;
+}
+
+.safetyList {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.19rem;
+  margin-top: 0.72rem;
+  font-weight: 700;
+  font-size: 0.3rem;
+  line-height: 1;
+  letter-spacing: 0.197em;
+  color: var(--lime);
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* ================= ABOUT ================= */
+.about {
+  background: var(--gray-2);
+  padding: 1.03rem 0 1.1rem;
+}
+
+.aboutTitle .secTitleEn {
+  font-size: 1.443rem;
+  letter-spacing: -0.045em;
+  margin-top: 0.02rem;
+  transform: translateX(-0.07rem);
+  -webkit-text-stroke: 1px #7a7a7a;
+}
+
+.aboutTitle .secTitleJa {
+  margin-top: 0.14rem;
+  font-size: 0.224rem;
+  transform: translateX(-0.05rem);
+}
+
+.aboutList {
+  margin: 0.74rem 0 0 0.49rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.13em;
+  white-space: nowrap;
+}
+
+.aboutRow + .aboutRow {
+  margin-top: 0.66rem;
+}
+
+.aboutHead {
+  display: flex;
+  align-items: center;
+  gap: 0.11rem;
+  height: 0.49rem;
+  font-size: 0.29rem;
+  letter-spacing: 0.27em;
+  color: var(--olive);
+}
+
+.aboutIcon {
+  width: 0.5rem;
+  height: 0.49rem;
+}
+
+.aboutRow dd {
+  padding-left: 0.64rem;
+}
+
+.aboutYear {
+  margin-top: 0.18rem;
+  font-size: 0.21rem;
+  letter-spacing: 0.2em;
+}
+
+.aboutDate {
+  margin-top: 0.24rem;
+  font-size: 0.29rem;
+  letter-spacing: 0.226em;
+}
+
+.aboutPill {
+  display: inline-block;
+  margin-top: 0.16rem;
+  padding: 0 0.19rem;
+  width: 1.1rem;
+  height: 0.43rem;
+  background: var(--olive);
+  font-size: 0.17rem;
+  line-height: 0.43rem;
+  letter-spacing: 0.12em;
+}
+
+.aboutTime {
+  margin-top: 0.17rem;
+  font-size: 0.23rem;
+  letter-spacing: 0.226em;
+}
+
+.aboutVenue {
+  margin-top: 0.49rem !important;
+}
+
+.aboutVenue .aboutLead {
+  margin-top: 0.13rem;
+  letter-spacing: 0.25em;
+}
+
+.aboutLead {
+  margin-top: 0.27rem;
+  font-size: 0.29rem;
+  line-height: 0.41rem;
+  letter-spacing: 0.14em;
+}
+
+.aboutAddr {
+  margin-top: 0.13rem;
+  font-size: 0.215rem;
+  line-height: 0.29rem;
+  letter-spacing: 0.24em;
+}
+
+.aboutTheme {
+  margin-top: 0.67rem !important;
+}
+
+.aboutTheme .aboutLead {
+  margin-top: 0.1rem;
+  line-height: 0.42rem;
+  letter-spacing: 0.2em;
+}
+
+.aboutBody {
+  margin-top: 0.12rem;
+  font-size: 0.235rem;
+  line-height: 0.33rem;
+  letter-spacing: 0.22em;
+}
+
+.aboutContents {
+  margin-top: 0.66rem !important;
+}
+
+.contentsGrid {
+  display: grid;
+  grid-template-columns: 2.06rem 2.13rem;
+  margin: 0.14rem 0 0 -0.07rem;
+  font-size: 0.2rem;
+  line-height: 0.33rem;
+  letter-spacing: 0.17em;
+}
+
+.contentsGrid li {
+  padding: 0.17rem 0 0.13rem 0.07rem;
+}
+
+.contentsGrid li:nth-child(even) {
+  padding-left: 0.25rem;
+  position: relative;
+}
+
+.contentsGrid li:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.13rem;
+  bottom: 0.14rem;
+  width: 2px;
+  background: #e6e6e6;
+}
+
+.contentsGrid li:nth-child(1),
+.contentsGrid li:nth-child(2),
+.contentsGrid li:nth-child(3),
+.contentsGrid li:nth-child(4) {
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.contentsGrid li:nth-child(1),
+.contentsGrid li:nth-child(2) {
+  padding-top: 0;
+}
+
+.contentsGrid li:nth-child(1)::before,
+.contentsGrid li:nth-child(2)::before {
+  top: 0.03rem;
+}
+
+.aboutRecommend {
+  margin-top: 0.21rem !important;
+}
+
+.tags {
+  display: flex;
+  flex-direction: column;
+  gap: 0.255rem;
+  margin: 0.18rem 0 0 -0.03rem;
+  font-size: 0.235rem;
+  letter-spacing: 0.02em;
+}
+
+/* ================= STAFF ================= */
+.staff {
+  padding: 1.25rem 0 1.55rem;
+}
+
+.staffTitle .secTitleEn {
+  font-size: 0.955rem;
+  margin-top: 0.02rem;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.staffTitle .secTitleJa {
+  margin-top: 0.04rem;
+  margin-bottom: 0.03rem;
+  font-size: 0.23rem;
+}
+
+.staffCard {
+  position: relative;
+  margin-top: 0.06rem;
+}
+
+.staffImg {
+  width: 100%;
+}
+
+.staffName {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4.68rem;
+  font-weight: 700;
+  font-size: 0.24rem;
+  line-height: 0.29rem;
+  letter-spacing: 0.2em;
+  padding-left: 0.2em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.staffProfile {
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.staffProfile dt {
+  position: absolute;
+  left: 1.12rem;
+  width: 0.56rem;
+  font-size: 0.15rem;
+  text-align: center;
+}
+
+.staffProfile dd {
+  position: absolute;
+  left: 1.74rem;
+  font-size: 0.21rem;
+  line-height: 0.27rem;
+  color: #231815;
+}
+
+.staffTag1 {
+  top: 5.5rem;
+}
+
+.staffTag2 {
+  top: 6.02rem;
+}
+
+.staffTag3 {
+  top: 6.34rem;
+}
+
+.staffVal1 {
+  top: 5.43rem;
+}
+
+.staffVal2 {
+  top: 5.98rem;
+}
+
+.staffVal3 {
+  top: 6.28rem;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.23rem;
+  margin: 0.68rem 0 0 -0.08rem;
+}
+
+.dots span {
+  width: 0.13rem;
+  height: 0.13rem;
+  border-radius: 50%;
+  background: #6c6c6c;
+}
+
+.dots .dotActive {
+  background: #fff;
+}
+
+/* ================= EXTERIOR ================= */
+.exterior {
+  position: relative;
+  height: 12.98rem;
+}
+
+.exteriorBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.exteriorTitle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1.0rem;
+}
+
+.exteriorTitle .secTitleEn {
+  font-size: 1rem;
+  letter-spacing: -0.057em;
+  transform: translateX(-0.06rem);
+  -webkit-text-stroke: 1px #fff;
+}
+
+.exteriorTitle .secTitleJa {
+  margin-top: 0.06rem;
+  font-size: 0.225rem;
+  transform: translateX(-0.07rem);
+}
+
+.exItem {
+  position: absolute;
+  font-family: var(--font-open), var(--font-noto), sans-serif;
+  white-space: nowrap;
+}
+
+.ex01 {
+  left: 0.52rem;
+  top: 5.86rem;
+}
+
+.ex02 {
+  left: 3.17rem;
+  top: 5.86rem;
+}
+
+.ex03 {
+  left: 0.52rem;
+  top: 8.36rem;
+}
+
+.ex04 {
+  left: 3.17rem;
+  top: 8.36rem;
+}
+
+.ex05 {
+  left: 0.52rem;
+  top: 10.45rem;
+}
+
+.exHead {
+  display: flex;
+  align-items: center;
+  gap: 0.13rem;
+  height: 0.46rem;
+}
+
+.exNo {
+  font-weight: 400;
+  font-size: 0.56rem;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px #e6e6e6;
+}
+
+.exName {
+  font-weight: 700;
+  font-size: 0.225rem;
+  line-height: 0.22rem;
+}
+
+.swatches {
+  display: flex;
+  gap: 0.07rem;
+  margin-top: 0.18rem;
+}
+
+.swatches li {
+  width: 0.41rem;
+  height: 0.41rem;
+  border-radius: 0.08rem;
+}
+
+.exText {
+  margin-top: 0.14rem;
+  font-weight: 700;
+  font-size: 0.197rem;
+  line-height: 0.272rem;
+}
+
+.ex01 .exText {
+  margin-top: 0.24rem;
+}
+
+.ex03 .exText,
+.ex04 .exText {
+  margin-top: 0.16rem;
+}
+
+/* ================= FLOW ================= */
+.flow {
+  padding: 1.04rem 0 0;
+}
+
+.flowTitle .secTitleEn {
+  font-family: var(--font-open), sans-serif;
+  font-weight: 800;
+  font-size: 1.425rem;
+  letter-spacing: 0;
+  -webkit-text-stroke: 1px #6c6c6c;
+  transform: translateX(-0.125rem);
+}
+
+.flowTitle .secTitleJa {
+  margin-top: 0.17rem;
+  font-size: 0.2265rem;
+  transform: translateX(-0.08rem);
+}
+
+.flowList {
+  margin: 0.69rem 0 0 1.15rem;
+}
+
+.flowItem {
+  display: flex;
+  align-items: center;
+  height: 0.56rem;
+  border-bottom: 1.5px solid #cfcfcf;
+}
+
+.flowItem + .flowItem {
+  margin-top: 0.52rem;
+}
+
+.flowNo {
+  width: 0.88rem;
+  font-family: var(--font-open), sans-serif;
+  font-weight: 800;
+  font-size: 0.53rem;
+  line-height: 1;
+  color: #7f7f7f;
+  transform: translateY(-0.08rem);
+}
+
+.flowText {
+  font-family: var(--font-open), var(--font-noto), sans-serif;
+  font-weight: 700;
+  font-size: 0.22rem;
+  line-height: 1;
+  transform: translateY(-0.04rem);
+}
+
+/* ================= FAQ ================= */
+.faq {
+  padding: 1.74rem 0 0.77rem;
+}
+
+.faqTitle .secTitleEn {
+  font-family: var(--font-open), sans-serif;
+  font-weight: 800;
+  font-size: 1.453rem;
+  letter-spacing: -0.066em;
+  -webkit-text-stroke: 1px #6c6c6c;
+  transform: translateX(-0.16rem);
+}
+
+.faqTitle .secTitleJa {
+  margin-top: 0.075rem;
+  font-family: var(--font-open), sans-serif;
+  font-size: 0.22rem;
+  transform: translateX(-0.1rem);
+}
+
+.faqList {
+  width: 4.41rem;
+  margin: 0.84rem 0 0 0.75rem;
+  font-family: var(--font-open), var(--font-noto), sans-serif;
+  font-weight: 700;
+}
+
+.faqItem {
+  padding-bottom: 0.33rem;
+  border-bottom: 0.018rem solid #e6e6e6;
+}
+
+.faqItem + .faqItem {
+  padding-top: 0.4rem;
+}
+
+.faqQ {
+  margin-left: -0.02rem;
+  font-size: 0.224rem;
+  line-height: 1;
+  color: var(--lime);
+}
+
+.faqA {
+  margin-top: 0.17rem;
+  margin-left: -0.03rem;
+  width: 4.3rem;
+  font-size: 0.225rem;
+  line-height: 0.305rem;
+}
+
+/* ================= PREMIUM ================= */
+.premium {
+  position: relative;
+  height: 7.43rem;
+}
+
+.premiumBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.premiumText {
+  position: absolute;
+  left: 0.47rem;
+  top: 4.56rem;
+  font-weight: 900;
+  font-size: 0.65rem;
+  line-height: 0.93rem;
+  white-space: nowrap;
+  transform: skewX(-10deg);
+  transform-origin: left bottom;
+  text-shadow: 0 0 0.12rem rgba(0, 0, 0, 0.35);
+}
+
+.premiumStrong {
+  font-size: 0.84rem;
+  text-shadow: none;
+  background: linear-gradient(to bottom, #ffe600 20%, #ff8a00 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--gray-2);
+  padding: 0.36rem 0 0.34rem;
+}
+
+.footer .btnPair {
+  width: 4.95rem;
+  margin-left: 0.48rem;
+}
+
+.footerLogo {
+  width: 4.41rem;
+  margin: 0.58rem 0 0 0.73rem;
+}
+
+.store {
+  margin: 0.77rem 0 0 0.77rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.store + .store {
+  margin-top: 0.4rem;
+}
+
+.storeName {
+  font-size: 0.225rem;
+  line-height: 1;
+  color: var(--lime);
+}
+
+.storeText {
+  margin-top: 0.17rem;
+  font-family: var(--font-open), var(--font-noto), sans-serif;
+  font-size: 0.17rem;
+  line-height: 0.24rem;
+  letter-spacing: 0.04em;
+}
+
+.eventBox {
+  display: flex;
+  align-items: center;
+  width: 4.39rem;
+  height: 1.29rem;
+  margin: 0.51rem 0 0 0.77rem;
+  background: #fff;
+  color: #231815;
+  font-family: var(--font-open), sans-serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.eventName {
+  width: 2.23rem;
+  padding-left: 0.24rem;
+  font-size: 0.235rem;
+  line-height: 0.32rem;
+}
+
+.eventDate {
+  display: flex;
+  flex-direction: column;
+  height: 0.84rem;
+  padding-left: 0.23rem;
+  border-left: 2px solid #231815;
+}
+
+.eventYear {
+  margin-top: 0.07rem;
+  font-size: 0.24rem;
+}
+
+.eventDays {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  font-size: 0.45rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.eventDays i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.17rem;
+  height: 0.17rem;
+  margin: 0.1rem 0.03rem 0 0.02rem;
+  border-radius: 50%;
+  font-family: var(--font-noto), sans-serif;
+  font-style: normal;
+  font-size: 0.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.dayFri {
+  background: #8c8c8c;
+}
+
+.daySat {
+  background: #1a6fb5;
+}
+
+.daySun {
+  background: #d7182a;
+}
+
+.follow {
+  margin: 0.58rem 0 0 0.78rem;
+  font-family: var(--font-open), sans-serif;
+  font-weight: 700;
+  font-size: 0.222rem;
+  line-height: 1;
+}
+
+.sns {
+  display: flex;
+  justify-content: center;
+  gap: 0.41rem;
+  margin: 0.38rem 0 0 0.03rem;
+}
+
+.snsCircle,
+.snsLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.88rem;
+  height: 0.88rem;
+  border-radius: 50%;
+}
+
+.snsCircle {
+  border: 1px solid #e6e6e6;
+}
+
+.snsCircle svg {
+  width: 0.56rem;
+  height: 0.56rem;
+}
+
+.snsLine svg {
+  width: 100%;
+  height: 100%;
+}
+
+.copyright {
+  margin-top: 0.81rem;
+  font-family: var(--font-open), sans-serif;
+  font-weight: 700;
+  font-size: 0.138rem;
+  line-height: 1;
+  text-align: center;
+}
