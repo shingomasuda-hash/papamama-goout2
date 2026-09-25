@@ -39,3 +39,12 @@ npm run lint
 | --- | --- | --- |
 | `consultation`（相談予約） | `https://s.lmes.jp/landing-qr/2007227153-vjoL5182?uLand=8DfPMx` | `hero` / `middle`×2 / `footer` / `footer-sns`（LINEアイコン） |
 | `paint-event`（塗装体験） | `https://s.lmes.jp/landing-qr/2007227153-vjoL5182?uLand=Z9vBMh` | `hero` / `paint`（塗装概要の「LINEから予約」） / `footer` |
+
+## スタッフ紹介スライダー
+
+`src/app/staff.ts` の `STAFF` 配列にスタッフを追加すると、スライドとドットが自動で増えます（2人以上でスワイプ／ドラッグ／ドット／←→キーが有効）。
+
+- 写真は背景を切り抜いた透過 PNG を `public/images/` に置き、`photo.src` に指定（看板中央に立つ構図。位置・サイズは `left` / `top` / `width` で調整可）
+- 趣味・特技・一言は配列の要素ごとに改行
+- 初期表示は中央のスタッフ（見本では5人中3人目）
+- 枝・葉は固定、看板（`staff-board.jpg`）部分だけがスライドします

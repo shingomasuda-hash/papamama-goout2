@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Cta } from "./components/Cta";
+import { StaffSlider } from "./components/StaffSlider";
+import { STAFF, STAFF_INITIAL_INDEX } from "./staff";
 import s from "./page.module.css";
 
 const FULL = "(max-width: 450px) 100vw, 450px";
@@ -433,44 +435,7 @@ export default function Home() {
       {/* ===== STAFF ===== */}
       <section className={s.staff}>
         <OutlineTitle en="STAFF" ja="スタッフ紹介" className={s.staffTitle} />
-        <div className={s.staffCard}>
-          <Image
-            className={s.staffImg}
-            src="/images/staff.jpg"
-            width={596}
-            height={702}
-            sizes={FULL}
-            alt="スタッフ 森行 啓太"
-          />
-          <p className={s.staffName}>
-            森行 啓太
-            <br />
-            モリユキ ケイタ
-          </p>
-          <dl className={s.staffProfile}>
-            <dt className={s.staffTag1}>趣味</dt>
-            <dd className={s.staffVal1}>
-              キャンプ、サップ、サッカー、
-              <br />
-              スノボー、ダイビング
-            </dd>
-            <dt className={s.staffTag2}>特技</dt>
-            <dd className={s.staffVal2}>お客様を笑顔にできる！</dd>
-            <dt className={s.staffTag3}>一言</dt>
-            <dd className={s.staffVal3}>
-              お客様にとって最高の１台をご
-              <br />
-              提案します！
-            </dd>
-          </dl>
-        </div>
-        <div className={s.dots} aria-hidden="true">
-          <span />
-          <span />
-          <span className={s.dotActive} />
-          <span />
-          <span />
-        </div>
+        <StaffSlider staff={STAFF} initialIndex={STAFF_INITIAL_INDEX} />
       </section>
 
       {/* ===== EXTERIOR ===== */}
