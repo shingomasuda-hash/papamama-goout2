@@ -1,37 +1,26 @@
+import type { StaticImageData } from "next/image";
+import imgStaff1 from "../../public/images/staff/staff-01.png";
+import imgStaff2 from "../../public/images/staff/staff-02.png";
+import imgStaff3 from "../../public/images/staff/staff-03.png";
+import imgStaff4 from "../../public/images/staff/staff-04.png";
+import imgStaff5 from "../../public/images/staff/staff-05.png";
+import imgStaff6 from "../../public/images/staff/staff-06.png";
+
 /**
- * スタッフ紹介スライダーのデータ。
- * 1件追加するとスライドとドットが1つずつ増える（2件以上でスワイプ・ドット操作が有効になる）。
- *
- * photo: 背景を切り抜いた透過PNG（public/images/ 配下）。
- *   left / top / width は看板スライド（幅470px × 高さ602px、見本基準のpx）上の配置。
- *   省略時は森行さんと同じ位置・サイズ（看板中央に立つ構図）になる。
- * hobby / skill / comment: 看板に表示する文言。配列の要素ごとに改行する。
+ * スタッフ紹介スライダーのデータ（前回LPと同じスタッフカード素材）。
+ * カード画像には看板・写真・名前・プロフィールが含まれる（586×816px の透過PNG）。
+ * 並び替え・追加はこの配列を編集するだけでスライドとドットに反映される。
  */
-export type StaffMember = {
-  name: string;
-  kana: string;
-  photo: {
-    src: string;
-    width: number;
-    height: number;
-    left?: number;
-    top?: number;
-  };
-  hobby: string[];
-  skill: string[];
-  comment: string[];
-};
+export type StaffMember = { src: StaticImageData; name: string; kana: string };
 
 export const STAFF: StaffMember[] = [
-  {
-    name: "森行 啓太",
-    kana: "モリユキ ケイタ",
-    photo: { src: "/images/staff-moriyuki.png", width: 220, height: 328 },
-    hobby: ["キャンプ、サップ、サッカー、", "スノボー、ダイビング"],
-    skill: ["お客様を笑顔にできる！"],
-    comment: ["お客様にとって最高の１台をご", "提案します！"],
-  },
+  { src: imgStaff2, name: "飯沼 蒼太郎", kana: "イイヌマ ソウタロウ" },
+  { src: imgStaff3, name: "後藤 朱里", kana: "ゴトウ アカリ" },
+  { src: imgStaff1, name: "森行 啓太", kana: "モリユキ ケイタ" },
+  { src: imgStaff4, name: "高木 流星", kana: "タカギ リュウセイ" },
+  { src: imgStaff5, name: "山田 零音", kana: "ヤマダ レオト" },
+  { src: imgStaff6, name: "松浦 加奈", kana: "マツウラ カナ" },
 ];
 
-/** 初期表示するスライド（見本では5人中の中央＝3人目が表示されている） */
-export const STAFF_INITIAL_INDEX = Math.floor((STAFF.length - 1) / 2);
+/** 初期表示（見本では森行さんが3番目のドットで表示されている） */
+export const STAFF_INITIAL_INDEX = 2;
